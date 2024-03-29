@@ -5,7 +5,7 @@ const dare = document.querySelector(".dare");
 const btns = document.querySelector(".btns");
 
 truth.addEventListener("click", truths);
-dare.addEventListener("click", dares);
+// dare.addEventListener("click", dares);
 
 score = 1;
 
@@ -22,12 +22,6 @@ function truths() {
   decisions();
   //   console.log("aa");
   //   console.log();
-}
-
-function dares() {
-  const truthsArray = ["drudh1", "d2", "d3", "d4", "d5"];
-  const aa = Math.floor(Math.random() * truthsArray.length);
-  quiz.textContent = console.log(aa);
 }
 
 function decisions() {
@@ -56,7 +50,7 @@ function decisions() {
     dare.textContent = "Dare";
 
     truth.addEventListener("click", truths);
-    dare.addEventListener("click", dares);
+    // dare.addEventListener("click", dares);
 
     btns.textContent = "";
     btns.appendChild(truth);
