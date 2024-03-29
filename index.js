@@ -68,16 +68,8 @@ function dareSelection() {
 function addScore() {
   scores.textContent = "Score: " + (score++ + 1);
   quiz.textContent = "Congrats!! Let's go again";
-  const truth = document.createElement("button");
-  const dare = document.createElement("button");
 
-  truth.className = "truth";
-  dare.className = "dare";
-  truth.textContent = "Truth";
-  dare.textContent = "Dare";
-
-  truth.addEventListener("click", truths);
-  dare.addEventListener("click", dares);
+  navButtons;
 
   btns.textContent = "";
   btns.appendChild(truth);
@@ -86,8 +78,15 @@ function addScore() {
 
 function removeScore() {
   scores.textContent = "Score: " + (score-- - 1);
+  quiz.textContent = "Ooops!! Let's go again";
 
-  quiz.textContent = "OOoops!! Let's go again";
+  navButtons;
+  btns.textContent = "";
+  btns.appendChild(truth);
+  btns.appendChild(dare);
+}
+
+function navButtons() {
   const truth = document.createElement("button");
   const dare = document.createElement("button");
 
@@ -98,8 +97,4 @@ function removeScore() {
 
   truth.addEventListener("click", truths);
   dare.addEventListener("click", dares);
-
-  btns.textContent = "";
-  btns.appendChild(truth);
-  btns.appendChild(dare);
 }
